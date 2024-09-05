@@ -1,27 +1,12 @@
-# MyApp
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Actividad 1:
+Tarea: Crear las vistas: view-one, view-tow y view-three y el componente header e implementa la lógica necesaria para que desde el componente header se pueda navegar a las vistas creadas.
+### Actividad 2.
+Tarea: En la vista view-one implementa un formulario que permita al usuario introducir un nombre para poder realizar una búsqueda sobre los datos de los personajes de la serie Rick & Morty, obtenidos mediante una petición GET a la API REST pública ‘The Rick and Morty API’. De Para ello deberás implementar un servicio, las interfaces necesarias y crear un componente Card e instanciarlo en la vista view-one. Empleando @Input, @Output y EventEmitter implementa la lógica necesaria para que se muestren en el componente Card los datos siguientes: foto, nombre y status del personaje obtenidos de la petición GET. Se deberán mostrar los personajes siguiendo la paginación que ofrece la propia API, es decir, mostrando 20 personajes por pantalla. Al pulsar sobre los botones ‘Anteriores’ y ‘Siguientes’ se deberá poder navegar sobre la paginación implementada.
+Crea un componente Modal e instáncialo en la vista view-one. Implementa la lógica necesaria mediante @Input, @Output y EventEmitter para que al hacer click sobre la foto del componente Card se active la pantalla modal del componente Modal y se muestre la foto del personaje sobre el que se ha realizado click y la lista de todos los capítulos en los que ha aparecido dicho personaje. Al hacer click sobre el botón para cerrar la pantalla modal, ésta deberá dejar de mostrarse.
+### Actividad 3.
+Tarea: En la vista view-two implementa la lógica necesaria para que al cargarse la vista, se realice una petición GET a la API REST pública ‘Ball Don’t Lie’ para obtener los datos de todos los personajes, utilizando una paginación de 100 personajes por página. Instancia los componentes Card y Modal implementado en la actividad anterior e implementa la lógica necesaria para que se muestren en el componente Card los datos siguientes obtenidos de la petición GET: nombre del jugador e id, la foto será la proporcionada en el archivo index.html. Se deberán mostrar los personajes siguiendo una paginación de 100 personajes por pantalla. Al pulsar sobre los botones ‘Anteriores’ y ‘Siguientes’ se deberá poder navegar sobre la paginación implementada.
+Instancia el componente Modal e implementa la lógica necesaria para que al hacer click sobre la foto del componente Card se active la pantalla modal del componente Modal y se muestre la foto proporcionada en el archivo index.html, el nombre del jugador y las cantidades acumuladas de puntos, rebotes y asistencias obtenidas a partir del registro de todos los partidos disputados por el jugador. Al hacer click sobre el botón para cerrar la pantalla modal, ésta deberá dejar de mostrarse.
+### Actividad 4.
+Tarea: Crear un componente Photos e instáncialo en la vista view-three. Mediante @Input, @Output y EventEmitter implementa la lógica necesaria para que cuando se pulse sobre cualquiera de las cinco fotos en miniatura, ésta se muestre debajo.
+Instancia el componente Modal de modo que si se pulsa sobre la imagen más grande se muestre una pantalla modal con el nombre de la verdura seleccionada.
+Implementa los eventos necesarios para que cuando se pulse sobre las inscripciones Verduras y Frutas en la vista view-three, se pase al componente Photos las imágenes correspondientes a la categoría seleccionada –frutas o verduras-. NOTA: Si está seleccionada la categoría Verduras y posteriormente se selecciona Frutas, al cambiar el contenido de una categoría a otra, la imagen agrandada dejará de mostrarse.

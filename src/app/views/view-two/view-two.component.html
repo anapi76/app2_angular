@@ -1,0 +1,18 @@
+<div id="page">
+
+    <section>
+        <div class="content">
+            <div class="grid">
+                @for (item of players; track item; let i= $index) {
+                <app-card (data)='onModal($event)' [name]="item.first_name" [photo]="photo" [id]="item.id"></app-card>
+                }
+            </div>
+            <div id='render-more'>
+                <button (click)="onClick(-1)">ANTERIORES</button>
+                <button (click)="onClick(1)">SIGUIENTES</button>
+            </div>
+        </div>
+    </section>
+
+</div>
+<app-modal (closeModal)="onClose($event)" [modal]='modal' [nameModal]="nameModal" [photoModal]="photo" [view]="view" [puntosAcumulados]="puntosAcumulados" [asistenciasAcumuladas]="asistenciasAcumuladas" [rebotesAcumulados]="rebotesAcumulados"></app-modal>

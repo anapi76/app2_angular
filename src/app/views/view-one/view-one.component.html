@@ -1,0 +1,32 @@
+<div id="page">
+
+    <section>
+        <form method="post">
+            <div class="answer-bank">
+                <div class="answer">
+                    <input type="text" name="name" id="name" value="nombre" placeholder="nombre" />
+                </div>
+                <div class="answer">
+                    <input type="submit" value="Enviar" class="primary" />
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <section>
+        <div class="content">
+            <div class="grid">
+                @for (item of characters; track item; let i= $index) {
+                <app-card (data)='onModal(i)' [name]="item.name" [photo]="item.image" [status_id]="item.status"></app-card>
+                }
+            </div>
+            <div id='render-more'>
+                <button (click)="onClick(-1)">ANTERIORES</button>
+                <button (click)="onClick(1)">SIGUIENTES</button>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+<app-modal (closeModal)="onClose($event)" [modal]='modal' [nameModal]="nameModal" [photoModal]="photoModal" [episodes]="episodes" [view]="view"></app-modal>

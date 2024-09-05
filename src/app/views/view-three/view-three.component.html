@@ -1,0 +1,9 @@
+<div style="margin-top: 30px;">
+    <div class="frutas">
+        @for(item of content;track item;let i=$index){
+            <h4 (click)="onClick(item,i)" style="margin-right: 40px;">{{item.tipo}}</h4>
+        }
+    </div>
+    <app-photos (data)="onPhoto($event)" (data1)="onModal($event)" [images]="images" [photo]="photo" [test]="test"></app-photos>
+</div>
+<app-modal (closeModal)="onClose($event)" [modal]='modal'[photoModal]="photoModal" [nameModal]="nameModal"></app-modal>

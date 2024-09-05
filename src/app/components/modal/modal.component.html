@@ -1,0 +1,24 @@
+<div [ngClass]="modal">
+    <div class="modal-content">
+        <span (click)="onClose()" class="close-button">×</span>
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <img src={{photoModal}} alt="" />
+                </div>
+                <div class="card-body">
+                    <span class="tag">{{nameModal}}</span>
+                    @if(view==='view1'){
+                    @for(item of episodes;track item;let i=$index){
+                    <h4>{{item.episode }} {{ item.name }}</h4>
+                    }
+                    }@else if(view==='view2'){
+                    <h4>{{puntosAcumulados }}</h4>
+                    <h4>{{rebotesAcumulados}}</h4>
+                    <h4>{{asistenciasAcumuladas }}</h4>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
